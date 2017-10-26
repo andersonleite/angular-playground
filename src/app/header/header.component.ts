@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
 })
 export class HeaderComponent implements OnInit {
 
-  loadedCharacter: {};
+  loadedCharacter: '...';
   constructor(private http: Http) { }
 
   ngOnInit() {
