@@ -4,6 +4,9 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { HeaderModule } from './header/header-service.module';
+import { HeaderService } from './header/header.service';
+
 
 @NgModule({
   declarations: [
@@ -12,9 +15,12 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    HeaderModule
   ],
-  providers: [],
+  providers: [
+    HeaderService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
