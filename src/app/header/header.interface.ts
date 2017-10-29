@@ -1,3 +1,6 @@
+import { Header } from "./header.model";
+import { Observable } from "rxjs/Observable";
+
 export interface IHeaderService {
-  getData(): string;
+  getData(): Observable<Header>;
 }

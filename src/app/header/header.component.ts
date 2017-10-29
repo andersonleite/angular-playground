@@ -3,6 +3,7 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { IHeaderService } from './header.interface';
 import { HeaderService } from './header.service';
+import { Header } from './header.model';
 
 @Component({
   selector: 'app-header',
@@ -12,21 +13,21 @@ import { HeaderService } from './header.service';
 export class HeaderComponent implements OnInit {
   service: IHeaderService;
   loading: boolean;
+  loadedCharacter: string;
 
-  loadedCharacter: '...';
   constructor(service: HeaderService, private http: Http) {
     this.service = service;
    }
 
   ngOnInit() {
-    this.service.getData();
     this.loading = true;
-    this.http.get('https://rails-playground-api.herokuapp.com/api/header')
-      .map(res => res.json())
-      .subscribe(header => {
-        this.loadedCharacter = header.title;
+    this.service.getData().subscribe(
+      (results: Header) => {
+        this.loadedCharacter = results.title;
         this.loading = false;
-      });
+      }
+    );
+
   }
 
 }
