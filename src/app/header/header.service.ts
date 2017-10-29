@@ -12,7 +12,7 @@ export class HeaderService implements IHeaderService {
   constructor(@Inject(API_URL) private apiUrl: string, private http: Http){ }
 
   getData(): Observable<Header> {
-    return this.http.get('https://rails-playground-api.herokuapp.com/api/header')
+    return this.http.get(this.apiUrl)
     .map((response: Response) => {
       return new Header({
         title: <any> response.json().title,
