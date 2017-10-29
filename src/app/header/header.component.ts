@@ -11,6 +11,7 @@ import { HeaderService } from './header.service';
 })
 export class HeaderComponent implements OnInit {
   service: IHeaderService;
+  loading: boolean;
 
   loadedCharacter: '...';
   constructor(service: HeaderService, private http: Http) {
@@ -19,10 +20,12 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.service.getData();
+    this.loading = true;
     this.http.get('https://rails-playground-api.herokuapp.com/api/header')
       .map(res => res.json())
       .subscribe(header => {
         this.loadedCharacter = header.title;
+        this.loading = false;
       });
   }
 
