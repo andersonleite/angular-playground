@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HeaderModule } from './header/header-service.module';
 import { HeaderService } from './header/header.service';
+import { headerInjectables } from './header/header.injectables';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HeaderService } from './header/header.service';
     HeaderModule
   ],
   providers: [
-    HeaderService
+    HeaderService,
+    headerInjectables
   ],
   bootstrap: [AppComponent]
 })
