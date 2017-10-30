@@ -7,12 +7,18 @@ import { HeaderComponent } from './header/header.component';
 import { HeaderModule } from './header/header-service.module';
 import { HeaderService } from './header/header.service';
 import { headerInjectables } from './header/header.injectables';
-
+import { youTubeSearchInjectables } from './search/youtube-search.injectables';
+import { YouTubeSearchComponent } from './search/youtube-search.component';
+import { SearchResultComponent } from './search/search-result.component';
+import { SearchBoxComponent } from './search/search-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    YouTubeSearchComponent,
+    SearchResultComponent,
+    SearchBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +27,8 @@ import { headerInjectables } from './header/header.injectables';
   ],
   providers: [
     HeaderService,
-    headerInjectables
+    headerInjectables,
+    youTubeSearchInjectables
   ],
   bootstrap: [AppComponent]
 })
