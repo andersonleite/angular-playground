@@ -4,4 +4,5 @@ body {
   text-align: center;
   color: white;
   font-family: monospace;
+  cursor: pointer;
 }

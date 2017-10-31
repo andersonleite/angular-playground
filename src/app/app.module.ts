@@ -11,6 +11,7 @@ import { youTubeSearchInjectables } from './search/youtube-search.injectables';
 import { YouTubeSearchComponent } from './search/youtube-search.component';
 import { SearchResultComponent } from './search/search-result.component';
 import { SearchBoxComponent } from './search/search-box.component';
+import { CircleComponent } from './circle/circle.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SearchBoxComponent } from './search/search-box.component';
     HeaderComponent,
     YouTubeSearchComponent,
     SearchResultComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    CircleComponent
   ],
   imports: [
     BrowserModule,
