@@ -3,7 +3,7 @@ import {
   OnInit,
   Input
 } from '@angular/core';
-import { SearchResult } from './search-result.model';
+import {SearchResult} from './search-result.model';
 
 
 @Component({
@@ -13,7 +13,8 @@ import { SearchResult } from './search-result.model';
 export class SearchResultComponent implements OnInit {
   @Input() result: SearchResult;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

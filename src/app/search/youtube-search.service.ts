@@ -8,7 +8,7 @@ import { SearchResult } from './search-result.model';
 
 /*
   This API key may or may not work for you. Your best bet is to issue your own
-  API key by following these instructions:
+  API key by following these instructions:,
   https://developers.google.com/youtube/registering_an_application#Create_API_Keys
 
   Here I've used a **server key** and make sure you enable YouTube.
@@ -26,20 +26,20 @@ export const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search';
 @Injectable()
 export class YouTubeSearchService {
   constructor(private http: Http,
-    @Inject(YOUTUBE_API_KEY) private apiKey: string,
-    @Inject(YOUTUBE_API_URL) private apiUrl: string) {
-    }
+              @Inject(YOUTUBE_API_KEY) private apiKey: string,
+              @Inject(YOUTUBE_API_URL) private apiUrl: string) {
+  }
 
-    search(query: string): Observable<SearchResult[]> {
-      const params: string = [
-        `q=${query}`,
-        `key=${this.apiKey}`,
-        `part=snippet`,
-        `type=video`,
-        `maxResults=10`
-      ].join('&');
-      const queryUrl = `${this.apiUrl}?${params}`;
-      return this.http.get(queryUrl)
+  search(query: string): Observable<SearchResult[]> {
+    const params: string = [
+      `q=${query}`,
+      `key=${this.apiKey}`,
+      `part=snippet`,
+      `type=video`,
+      `maxResults=10`
+    ].join('&');
+    const queryUrl = `${this.apiUrl}?${params}`;
+    return this.http.get(queryUrl)
       .map((response: Response) => {
         return (<any>response.json()).items.map(item => {
           // console.log("raw item", item); // uncomment if you want to debug
@@ -51,5 +51,5 @@ export class YouTubeSearchService {
           });
         });
       });
-    }
   }
+}

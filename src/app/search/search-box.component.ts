@@ -8,7 +8,7 @@ import {
 
 // By importing just the rxjs operators we need, We're theoretically able
 // to reduce our build size vs. importing all of them.
-import { Observable } from 'rxjs/Observable';
+import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
@@ -16,8 +16,8 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/switch';
 
-import { YouTubeSearchService } from './youtube-search.service';
-import { SearchResult } from './search-result.model';
+import {YouTubeSearchService} from './youtube-search.service';
+import {SearchResult} from './search-result.model';
 
 @Component({
   selector: 'app-search-box',

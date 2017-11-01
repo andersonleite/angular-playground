@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(service: HeaderService, private http: Http) {
     this.service = service;
-   }
+  }
 
   ngOnInit() {
     this.loading = true;
@@ -27,7 +27,16 @@ export class HeaderComponent implements OnInit {
         this.loading = false;
       }
     );
+  }
 
+  updatePlaygroundStyle(original) {
+    if (original) {
+      document.body.style.background = '#fff';
+      document.body.style.color = '#be3129';
+      return;
+    }
+    document.body.style.background = '#be3129';
+    document.body.style.color = '#fff';
   }
 
 }

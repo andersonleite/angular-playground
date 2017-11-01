@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {log} from "util";
+import { Component, ElementRef, EventEmitter, OnInit, Output } from '@angular/core';
+import { Observable } from "rxjs/Observable";
+import { log } from "util";
 
 @Component({
   selector: 'app-circle',
@@ -8,15 +9,37 @@ import {log} from "util";
 })
 export class CircleComponent implements OnInit {
 
-  constructor() { }
+  // opt + ent tp import
+  @Output() bgControl: EventEmitter<boolean> = new EventEmitter<boolean>();
+  original: boolean;
 
-  color:string = '#white';
-
-  changeStyle($event){
-    this.color = $event.type == 'mouseover' ? '#be3129' : 'white';
+  constructor(private el: ElementRef) {
   }
 
-  ngOnInit() {
+  color: string = 'white';
+
+  changeStyle($event) {
+    this.color = $event.type === 'mouseover' ? '#be3129' : 'white';
+  }
+
+
+  ngOnInit(): void {
+    // convert the `keyup` event into an observable stream
+    Observable.fromEvent(this.el.nativeElement, 'click')
+    // act on the return of the click
+      .subscribe(
+        () => { // on sucesss
+          this.original = !this.original;
+          this.bgControl.emit(this.original);
+        },
+        (err: any) => { // on error
+          console.log(err);
+          this.bgControl.emit(true);
+        },
+        () => { // on completion
+          this.bgControl.emit(true);
+        }
+      );
   }
 
 }

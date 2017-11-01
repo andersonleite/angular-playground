@@ -34,4 +34,5 @@ import { CircleComponent } from './circle/circle.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
