@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,6 +13,15 @@ import { YouTubeSearchComponent } from './search/youtube-search.component';
 import { SearchResultComponent } from './search/search-result.component';
 import { SearchBoxComponent } from './search/search-box.component';
 import { CircleComponent } from './circle/circle.component';
+import { AboutComponent } from './about/about.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ContactComponent } from './contact/contact.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'contact', component: ContactComponent },
+  { path: 'about', component: AboutComponent }
+];
 
 @NgModule({
   declarations: [
@@ -20,17 +30,21 @@ import { CircleComponent } from './circle/circle.component';
     YouTubeSearchComponent,
     SearchResultComponent,
     SearchBoxComponent,
-    CircleComponent
+    CircleComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    HeaderModule
+    HeaderModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [
     HeaderService,
     headerInjectables,
-    youTubeSearchInjectables
+    youTubeSearchInjectables,
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
 })
