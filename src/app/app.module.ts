@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -16,6 +16,8 @@ import { CircleComponent } from './circle/circle.component';
 import { AboutComponent } from './about/about.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
+import { RollbarErrorHandler, rollbarFactory } from './rollbar/rollbar';
+import * as Rollbar from 'rollbar';
 
 const routes: Routes = [
   {path: 'home', redirectTo: '/', pathMatch: 'full'},
@@ -46,7 +48,9 @@ const routes: Routes = [
     HeaderService,
     headerInjectables,
     youTubeSearchInjectables,
-    {provide: LocationStrategy, useClass: HashLocationStrategy}
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
+    { provide: ErrorHandler, useClass: RollbarErrorHandler },
+    { provide: Rollbar,  useFactory: rollbarFactory }
   ],
   bootstrap: [AppComponent]
 })
