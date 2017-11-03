@@ -1,0 +1,18 @@
+.navLinks {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  width: 550px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navLinks a {
+  background-color: #be342b;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  text-decoration: none;
+}

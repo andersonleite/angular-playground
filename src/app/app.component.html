@@ -1,12 +1,12 @@
 <app-header></app-header>
-<hr>
 
 <div class="page-header">
   <div class="container">
-    <p>Router Sample</p>
     <div class="navLinks">
-      <a [routerLink]="['/contact']">Home</a>
-      <a [routerLink]="['/about']">About Us</a>
+      <a [routerLink]="['/home']">Home</a>
+      <a [routerLink]="['/youtube']">Youtube</a>
+      <a [routerLink]="['/contact']">Contact</a>
+      <a [routerLink]="['/about']">Spotify</a>
       <a [routerLink]="['/about/9']">9</a>
     </div>
   </div>
@@ -17,5 +17,3 @@
     <router-outlet></router-outlet>
   </div>
 </div>
-<hr>
-<app-you-tube-search></app-you-tube-search>

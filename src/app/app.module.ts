@@ -18,7 +18,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', redirectTo: '/', pathMatch: 'full'},
+  {path: 'youtube', component: YouTubeSearchComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'about', component: AboutComponent},
   {path: 'about/:id', component: AboutComponent}
