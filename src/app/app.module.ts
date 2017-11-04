@@ -23,6 +23,11 @@ import { ArtistComponent } from './music/artist/artist.component';
 import { SearchComponent } from './music/search/search.component';
 import { TrackComponent } from './music/track/track.component';
 import { SPOTIFY_PROVIDERS } from './music/service/spotify.service';
+import { LoginComponent } from './auth/login/login.component';
+import { ProtectedComponent } from './auth/protected/protected.component';
+
+import { AUTH_PROVIDERS } from './auth/service/auth.service';
+import { LoggedInGuard } from './auth/logged-in.guard';
 
 const routes: Routes = [
   {path: 'home', redirectTo: '/', pathMatch: 'full'},
@@ -35,6 +40,13 @@ const routes: Routes = [
   {path: 'artists/:id', component: ArtistComponent},
   {path: 'tracks/:id', component: TrackComponent},
   {path: 'albums/:id', component: AlbumComponent},
+  // authentication demo
+  { path: 'login', component: LoginComponent },
+  {
+    path: 'protected',
+    component: ProtectedComponent,
+    canActivate: [ LoggedInGuard ]
+  },
 ];
 
 @NgModule({
@@ -50,7 +62,9 @@ const routes: Routes = [
     AlbumComponent,
     ArtistComponent,
     SearchComponent,
-    TrackComponent
+    TrackComponent,
+    LoginComponent,
+    ProtectedComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +81,8 @@ const routes: Routes = [
     {provide: Rollbar, useFactory: rollbarFactory},
     SPOTIFY_PROVIDERS,
     {provide: APP_BASE_HREF, useValue: '/'},
+    AUTH_PROVIDERS,
+    LoggedInGuard
   ],
   bootstrap: [AppComponent]
 })
