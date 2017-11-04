@@ -30,7 +30,7 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'about', component: AboutComponent},
   {path: 'about/:id', component: AboutComponent},
-  {path: '', redirectTo: 'search', pathMatch: 'full'},
+  // {path: '', redirectTo: 'search', pathMatch: 'full'},
   {path: 'search', component: SearchComponent},
   {path: 'artists/:id', component: ArtistComponent},
   {path: 'tracks/:id', component: TrackComponent},
