@@ -3,7 +3,7 @@ import { Subject } from 'rxjs/Subject';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { User } from './user.model';
 
-@Injectable
+@Injectable()
 export class UserService {
   currentUser: Subject<User> = new BehaviorSubject<User>(null);
 
