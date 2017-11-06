@@ -28,6 +28,9 @@ import { ProtectedComponent } from './auth/protected/protected.component';
 
 import { AUTH_PROVIDERS } from './auth/service/auth.service';
 import { LoggedInGuard } from './auth/logged-in.guard';
+import { SquareComponent } from './animation/square/square.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 const routes: Routes = [
   {path: 'home', redirectTo: '/', pathMatch: 'full'},
@@ -64,10 +67,12 @@ const routes: Routes = [
     SearchComponent,
     TrackComponent,
     LoginComponent,
-    ProtectedComponent
+    ProtectedComponent,
+    SquareComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     HeaderModule,
     RouterModule.forRoot(routes)
