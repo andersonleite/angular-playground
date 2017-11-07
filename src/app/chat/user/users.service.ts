@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { User } from './user.model';
 
 @Injectable()
-export class UserService {
+export class UsersService {
   currentUser: Subject<User> = new BehaviorSubject<User>(null);
 
   public setCurrentUser(newUser: User): void {
@@ -13,5 +13,5 @@ export class UserService {
 }
 
 export const userServiceInjectables: Array<any> = [
-  UserService
+  UsersService
 ];

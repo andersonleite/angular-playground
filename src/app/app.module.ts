@@ -30,6 +30,10 @@ import { AUTH_PROVIDERS } from './auth/service/auth.service';
 import { LoggedInGuard } from './auth/logged-in.guard';
 import { SquareComponent } from './animation/square/square.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChatPageComponent } from './chat/chat-page/chat-page.component';
+import { UsersService } from './chat/user/users.service';
+import { MessagesService } from './chat/message/messages.service';
+import { ThreadsService } from './chat/thread/threads.service';
 
 
 const routes: Routes = [
@@ -68,7 +72,8 @@ const routes: Routes = [
     TrackComponent,
     LoginComponent,
     ProtectedComponent,
-    SquareComponent
+    SquareComponent,
+    ChatPageComponent
   ],
   imports: [
     BrowserModule,
@@ -87,7 +92,8 @@ const routes: Routes = [
     SPOTIFY_PROVIDERS,
     {provide: APP_BASE_HREF, useValue: '/'},
     AUTH_PROVIDERS,
-    LoggedInGuard
+    LoggedInGuard,
+    MessagesService, ThreadsService, UsersService
   ],
   bootstrap: [AppComponent]
 })
