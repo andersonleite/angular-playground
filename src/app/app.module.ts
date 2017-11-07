@@ -34,6 +34,11 @@ import { ChatPageComponent } from './chat/chat-page/chat-page.component';
 import { UsersService } from './chat/user/users.service';
 import { MessagesService } from './chat/message/messages.service';
 import { ThreadsService } from './chat/thread/threads.service';
+import { ChatNavBarComponent } from './chat/chat-nav-bar/chat-nav-bar.component';
+import { ChatThreadComponent } from './chat/chat-thread/chat-thread.component';
+import { ChatMessageComponent } from './chat/chat-message/chat-message.component';
+import { ChatThreadsComponent } from './chat/chat-threads/chat-threads.component';
+import { ChatWindowComponent } from './chat/chat-window/chat-window.component';
 
 
 const routes: Routes = [
@@ -73,7 +78,12 @@ const routes: Routes = [
     LoginComponent,
     ProtectedComponent,
     SquareComponent,
-    ChatPageComponent
+    ChatPageComponent,
+    ChatNavBarComponent,
+    ChatThreadComponent,
+    ChatMessageComponent,
+    ChatThreadsComponent,
+    ChatWindowComponent
   ],
   imports: [
     BrowserModule,
