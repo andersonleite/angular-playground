@@ -5,7 +5,7 @@ import { log } from "util";
 @Component({
   selector: 'app-circle',
   templateUrl: './circle.component.html',
-  styleUrls: ['./circle.component.css']
+  styleUrls: ['./circle.component.scss']
 })
 export class CircleComponent implements OnInit {
 

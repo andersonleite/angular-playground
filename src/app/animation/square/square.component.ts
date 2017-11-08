@@ -19,7 +19,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 
   ],
   templateUrl: './square.component.html',
-  styleUrls: ['./square.component.css']
+  styleUrls: ['./square.component.scss']
 })
 export class SquareComponent implements OnInit {
 
