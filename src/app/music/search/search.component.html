@@ -1,6 +1,9 @@
 
-<p>Spotify Music Search</p>
+<p>Spotify Music Search -
+<a href="https://accounts.spotify.com/authorize?client_id=7953d701241148dea69baefdfbd88849&response_type=token&redirect_uri=http://localhost:4200/search">login</a>
+</p>
 
+<!--<p *ngIf="!spotiffyLogged()">-->
 <p>
   <input type="text" #newquery
          [value]="query"
@@ -47,3 +50,4 @@
     </div>
   </div>
 </div>
+

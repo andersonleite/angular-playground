@@ -3,7 +3,7 @@
  * Angular
  */
 
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   Router,
   ActivatedRoute,
@@ -12,7 +12,8 @@ import {
 /*
  * Services
  */
-import {SpotifyService} from '../service/spotify.service';
+import { SpotifyService } from '../service/spotify.service';
+
 ;
 
 @Component({
@@ -29,16 +30,23 @@ export class SearchComponent implements OnInit {
               private route: ActivatedRoute) {
     this.route
       .queryParams
-      .subscribe(params => { this.query = params['query'] || ''; });
+      .subscribe(params => {
+        this.query = params['query'] || '';
+      });
   }
 
   ngOnInit(): void {
     this.search();
   }
 
+  spotiffyLogged() {
+    console.log(this.spotify.isLogged());
+    return this.spotify.isLogged();
+  }
+
   submit(query: string): void {
-    this.router.navigate(['search'], { queryParams: { query: query } })
-      .then(_ => this.search() );
+    this.router.navigate(['search'], {queryParams: {query: query}})
+      .then(_ => this.search());
   }
 
   search(): void {

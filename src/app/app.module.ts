@@ -14,7 +14,7 @@ import { SearchResultComponent } from './search/search-result.component';
 import { SearchBoxComponent } from './search/search-box.component';
 import { CircleComponent } from './circle/circle.component';
 import { AboutComponent } from './about/about.component';
-import { HashLocationStrategy, LocationStrategy, APP_BASE_HREF } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy, APP_BASE_HREF, PathLocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { RollbarErrorHandler, rollbarFactory } from './rollbar/rollbar';
 import * as Rollbar from 'rollbar';
@@ -96,7 +96,7 @@ const routes: Routes = [
     HeaderService,
     headerInjectables,
     youTubeSearchInjectables,
-    {provide: LocationStrategy, useClass: HashLocationStrategy},
+    {provide: LocationStrategy, useClass: PathLocationStrategy},
     {provide: ErrorHandler, useClass: RollbarErrorHandler},
     {provide: Rollbar, useFactory: rollbarFactory},
     SPOTIFY_PROVIDERS,
