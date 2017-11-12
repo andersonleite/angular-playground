@@ -116,6 +116,17 @@ button {
   color: #fff !important;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #000000;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
 code,
 kbd,
 pre,

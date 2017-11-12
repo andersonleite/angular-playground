@@ -16,10 +16,10 @@ export class CircleComponent implements OnInit {
   constructor(private el: ElementRef) {
   }
 
-  color: string = '#be3129';
+  color: string = '#000';
 
   changeStyle($event) {
-    this.color = $event.type === 'mouseover' ? 'white' : '#be3129';
+    this.color = $event.type === 'mouseover' ? 'white' : '#000';
   }
 
 

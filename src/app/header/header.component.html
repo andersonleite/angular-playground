@@ -1,4 +1,7 @@
-<p *ngIf="loading">loading...</p><p>{{ loadedCharacter }} Playground</p>
+<div class="header">
+  <p *ngIf="loading">loading...</p><p>{{ loadedCharacter }} Playground</p>
+  <p class="sub_header">A collection of learings about <strong>Angular</strong> and <strong>Rails</strong>.</p>
+</div>
 <app-circle (bgControl)="updatePlaygroundStyle($event)"></app-circle>
 
 
