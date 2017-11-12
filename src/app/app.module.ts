@@ -39,6 +39,7 @@ import { ChatThreadComponent } from './chat/chat-thread/chat-thread.component';
 import { ChatMessageComponent } from './chat/chat-message/chat-message.component';
 import { ChatThreadsComponent } from './chat/chat-threads/chat-threads.component';
 import { ChatWindowComponent } from './chat/chat-window/chat-window.component';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -90,7 +91,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     HttpModule,
     HeaderModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [
     HeaderService,
