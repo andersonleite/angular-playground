@@ -40,6 +40,8 @@ import { ChatMessageComponent } from './chat/chat-message/chat-message.component
 import { ChatThreadsComponent } from './chat/chat-threads/chat-threads.component';
 import { ChatWindowComponent } from './chat/chat-window/chat-window.component';
 import { FormsModule } from '@angular/forms';
+import { appStoreProviders } from './counter/app.store';
+import { CounterComponent } from './counter/counter/counter.component';
 
 
 const routes: Routes = [
@@ -47,6 +49,7 @@ const routes: Routes = [
   {path: 'youtube', component: YouTubeSearchComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'about', component: AboutComponent},
+  {path: 'counter', component: CounterComponent},
   {path: 'about/:id', component: AboutComponent},
   // {path: '', redirectTo: 'search', pathMatch: 'full'},
   {path: 'search', component: SearchComponent},
@@ -64,6 +67,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
+    CounterComponent,
     AppComponent,
     HeaderComponent,
     YouTubeSearchComponent,
@@ -95,6 +99,7 @@ const routes: Routes = [
     FormsModule
   ],
   providers: [
+    appStoreProviders,
     HeaderService,
     headerInjectables,
     youTubeSearchInjectables,

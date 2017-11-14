@@ -1325,12 +1325,6 @@ a.text-danger:focus {
 .bg-primary {
   color: #fff; }
 
-.bg-primary {
-  background-color: #337ab7; }
-
-a.bg-primary:hover,
-a.bg-primary:focus {
-  background-color: #286090; }
 
 .bg-success {
   background-color: #dff0d8; }
@@ -2913,27 +2907,22 @@ fieldset[disabled] a.btn-chat {
 
 .btn-default {
   color: #333;
-  background-color: #fff;
   border-color: #ccc; }
 .btn-default:focus, .btn-default.focus {
   color: #333;
-  background-color: #e6e6e6;
   border-color: #8c8c8c; }
 .btn-default:hover {
   color: #333;
-  background-color: #e6e6e6;
   border-color: #adadad; }
 .btn-default:active, .btn-default.active,
 .open > .btn-default.dropdown-toggle {
   color: #333;
-  background-color: #e6e6e6;
   border-color: #adadad; }
 .btn-default:active:hover, .btn-default:active:focus, .btn-default:active.focus, .btn-default.active:hover, .btn-default.active:focus, .btn-default.active.focus,
 .open > .btn-default.dropdown-toggle:hover,
 .open > .btn-default.dropdown-toggle:focus,
 .open > .btn-default.dropdown-toggle.focus {
   color: #333;
-  background-color: #d4d4d4;
   border-color: #8c8c8c; }
 .btn-default:active, .btn-default.active,
 .open > .btn-default.dropdown-toggle {
@@ -2953,11 +2942,9 @@ fieldset[disabled] .btn-default.active {
 
 .btn-primary, .chat-window .panel-footer .btn-chat {
   color: #fff;
-  background-color: #337ab7;
   border-color: #2e6da4; }
 .btn-primary:focus, .chat-window .panel-footer .btn-chat:focus, .btn-primary.focus, .chat-window .panel-footer .focus.btn-chat {
   color: #fff;
-  background-color: #286090;
   border-color: #122b40; }
 .btn-primary:hover, .chat-window .panel-footer .btn-chat:hover {
   color: #fff;
@@ -3002,7 +2989,6 @@ fieldset[disabled] .btn-chat:active,
 fieldset[disabled] .btn-primary.active,
 fieldset[disabled] .chat-window .panel-footer .active.btn-chat, .chat-window .panel-footer
 fieldset[disabled] .active.btn-chat {
-  background-color: #337ab7;
   border-color: #2e6da4; }
 .btn-primary .badge, .chat-window .panel-footer .btn-chat .badge {
   color: #337ab7;
