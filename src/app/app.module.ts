@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,7 +14,7 @@ import { SearchResultComponent } from './search/search-result.component';
 import { SearchBoxComponent } from './search/search-box.component';
 import { CircleComponent } from './circle/circle.component';
 import { AboutComponent } from './about/about.component';
-import { HashLocationStrategy, LocationStrategy, APP_BASE_HREF, PathLocationStrategy } from '@angular/common';
+import { APP_BASE_HREF, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { RollbarErrorHandler, rollbarFactory } from './rollbar/rollbar';
 import * as Rollbar from 'rollbar';
@@ -43,7 +43,7 @@ import { FormsModule } from '@angular/forms';
 import { appStoreProviders } from './counter/app.store';
 import { CounterComponent } from './counter/counter/counter.component';
 
-import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { routes } from './app.routing';
 // const routes: Routes = [
 //   {path: 'home', redirectTo: '/', pathMatch: 'full'},

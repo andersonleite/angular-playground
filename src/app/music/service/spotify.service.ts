@@ -1,9 +1,9 @@
-import { Injectable, OnInit } from '@angular/core';
-import { Headers, Http, RequestOptions, Response } from '@angular/http';
+import { Injectable } from '@angular/core';
+import { Headers, Http, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 // noinspection TsLint
 import 'rxjs/Rx';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 /**
  * SpotifyService works querying the Spotify Web API

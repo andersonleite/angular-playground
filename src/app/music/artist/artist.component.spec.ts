@@ -1,18 +1,7 @@
-import {
-  async,
-  ComponentFixture,
-  TestBed,
-  inject,
-  fakeAsync,
-} from '@angular/core/testing';
+import { async, fakeAsync, inject, } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-import {
-  advance,
-  createRoot,
-  RootCmp,
-  configureMusicTests
-} from '../test/test.module';
+import { advance, configureMusicTests, createRoot, RootCmp } from '../test/test.module';
 
 import { MockSpotifyService } from '../test/spotify.service.mock';
 import { SpotifyService } from '../service/spotify.service';

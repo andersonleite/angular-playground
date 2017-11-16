@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { extractStyleParams } from "@angular/animations/browser/src/util";
 
 @Component({
   selector: 'app-about',

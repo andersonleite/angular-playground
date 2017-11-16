@@ -9,7 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { CounterComponent } from './counter/counter/counter.component';
 import { ContactComponent } from './contact/contact.component';
 import { YouTubeSearchComponent } from './search/youtube-search.component';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {path: 'home', redirectTo: '/', pathMatch: 'full'},
