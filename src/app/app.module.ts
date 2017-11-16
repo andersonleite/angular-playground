@@ -43,27 +43,28 @@ import { FormsModule } from '@angular/forms';
 import { appStoreProviders } from './counter/app.store';
 import { CounterComponent } from './counter/counter/counter.component';
 
-
-const routes: Routes = [
-  {path: 'home', redirectTo: '/', pathMatch: 'full'},
-  {path: 'youtube', component: YouTubeSearchComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'counter', component: CounterComponent},
-  {path: 'about/:id', component: AboutComponent},
-  // {path: '', redirectTo: 'search', pathMatch: 'full'},
-  {path: 'search', component: SearchComponent},
-  {path: 'artists/:id', component: ArtistComponent},
-  {path: 'tracks/:id', component: TrackComponent},
-  {path: 'albums/:id', component: AlbumComponent},
-  // authentication demo
-  { path: 'login', component: LoginComponent },
-  {
-    path: 'protected',
-    component: ProtectedComponent,
-    canActivate: [ LoggedInGuard ]
-  },
-];
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { routes } from './app.routing';
+// const routes: Routes = [
+//   {path: 'home', redirectTo: '/', pathMatch: 'full'},
+//   {path: 'youtube', component: YouTubeSearchComponent},
+//   {path: 'contact', component: ContactComponent},
+//   {path: 'about', component: AboutComponent},
+//   {path: 'counter', component: CounterComponent},
+//   {path: 'about/:id', component: AboutComponent},
+//   // {path: '', redirectTo: 'search', pathMatch: 'full'},
+//   {path: 'search', component: SearchComponent},
+//   {path: 'artists/:id', component: ArtistComponent},
+//   {path: 'tracks/:id', component: TrackComponent},
+//   {path: 'albums/:id', component: AlbumComponent},
+//   // authentication demo
+//   { path: 'login', component: LoginComponent },
+//   {
+//     path: 'protected',
+//     component: ProtectedComponent,
+//     canActivate: [ LoggedInGuard ]
+//   },
+// ];
 
 @NgModule({
   declarations: [
@@ -96,7 +97,8 @@ const routes: Routes = [
     HttpModule,
     HeaderModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     appStoreProviders,
