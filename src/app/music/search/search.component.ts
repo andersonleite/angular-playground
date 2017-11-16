@@ -1,20 +1,7 @@
 ///<reference path="../../../../node_modules/@angular/core/src/metadata/directives.d.ts"/>
-/*
- * Angular
- */
-
 import { Component, OnInit } from '@angular/core';
-import {
-  Router,
-  ActivatedRoute,
-} from '@angular/router';
-
-/*
- * Services
- */
+import { ActivatedRoute, Router, } from '@angular/router';
 import { SpotifyService } from '../service/spotify.service';
-
-;
 
 @Component({
   selector: 'app-search',
@@ -37,11 +24,6 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.search();
-  }
-
-  spotiffyLogged() {
-    console.log(this.spotify.isLogged());
-    return this.spotify.isLogged();
   }
 
   submit(query: string): void {
