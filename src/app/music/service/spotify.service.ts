@@ -1,8 +1,8 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Headers, Http, RequestOptions, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-// import 'rxjs/Rx';
-import { environment } from '../../../environments/environment';
+// noinspection TsLint
+import 'rxjs/Rx';
 import { ActivatedRoute, Params } from '@angular/router';
 
 /**
@@ -16,13 +16,15 @@ export class SpotifyService {
   access__token: string;
 
   constructor(private http: Http, private route: ActivatedRoute) {
-    this.route
-      .queryParams
-      .subscribe(params => {
-        if (this.route.fragment['_value']) {
-          this.access__token = this.route.fragment['_value'].slice(13);
-        }
-      });
+    if (this.route.queryParams) {
+      this.route
+        .queryParams
+        .subscribe(params => {
+          if (this.route.fragment['_value']) {
+            this.access__token = this.route.fragment['_value'].slice(13);
+          }
+        });
+    }
   }
 
 
