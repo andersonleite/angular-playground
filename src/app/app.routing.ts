@@ -10,6 +10,7 @@ import { CounterComponent } from './counter/counter/counter.component';
 import { ContactComponent } from './contact/contact.component';
 import { YouTubeSearchComponent } from './search/youtube-search.component';
 import { Routes } from '@angular/router';
+import { BlogComponent } from './blog/blog.component';
 
 export const routes: Routes = [
   {path: 'home', redirectTo: '/', pathMatch: 'full'},
@@ -17,6 +18,7 @@ export const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'about', component: AboutComponent},
   {path: 'counter', component: CounterComponent},
+  {path: 'blog', component: BlogComponent},
   {path: 'about/:id', component: AboutComponent},
   // {path: '', redirectTo: 'search', pathMatch: 'full'},
   {path: 'search', component: SearchComponent},

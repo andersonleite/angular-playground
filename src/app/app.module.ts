@@ -39,37 +39,23 @@ import { ChatThreadComponent } from './chat/chat-thread/chat-thread.component';
 import { ChatMessageComponent } from './chat/chat-message/chat-message.component';
 import { ChatThreadsComponent } from './chat/chat-threads/chat-threads.component';
 import { ChatWindowComponent } from './chat/chat-window/chat-window.component';
-import { FormsModule } from '@angular/forms';
 import { appStoreProviders } from './counter/app.store';
 import { CounterComponent } from './counter/counter/counter.component';
-
+import {
+  FormsModule,
+  ReactiveFormsModule
+} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { routes } from './app.routing';
-// const routes: Routes = [
-//   {path: 'home', redirectTo: '/', pathMatch: 'full'},
-//   {path: 'youtube', component: YouTubeSearchComponent},
-//   {path: 'contact', component: ContactComponent},
-//   {path: 'about', component: AboutComponent},
-//   {path: 'counter', component: CounterComponent},
-//   {path: 'about/:id', component: AboutComponent},
-//   // {path: '', redirectTo: 'search', pathMatch: 'full'},
-//   {path: 'search', component: SearchComponent},
-//   {path: 'artists/:id', component: ArtistComponent},
-//   {path: 'tracks/:id', component: TrackComponent},
-//   {path: 'albums/:id', component: AlbumComponent},
-//   // authentication demo
-//   { path: 'login', component: LoginComponent },
-//   {
-//     path: 'protected',
-//     component: ProtectedComponent,
-//     canActivate: [ LoggedInGuard ]
-//   },
-// ];
+import { BlogComponent } from './blog/blog.component';
+import { BlogService } from './blog/blog.service';
+import { blogInjectables } from './blog/blog.injectables';
 
 @NgModule({
   declarations: [
     CounterComponent,
     AppComponent,
+    BlogComponent,
     HeaderComponent,
     YouTubeSearchComponent,
     SearchResultComponent,
@@ -98,12 +84,16 @@ import { routes } from './app.routing';
     HeaderModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     appStoreProviders,
     HeaderService,
+    BlogService,
     headerInjectables,
+    blogInjectables,
     youTubeSearchInjectables,
     {provide: LocationStrategy, useClass: PathLocationStrategy},
     {provide: ErrorHandler, useClass: RollbarErrorHandler},

@@ -1,0 +1,17 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Messages</h2>
+  <form [formGroup]="myForm"
+        (ngSubmit)="onSubmit(myForm.value)"
+        class="ui form">
+
+    <div class="field">
+      <label for="messageInput">Message</label>
+      <input type="text"
+             id="messageInput"
+             placeholder="message..."
+             [formControl]="myForm.controls['message']">
+    </div>
+
+    <button type="submit" class="ui button">Submit</button>
+  </form>
+</div>
