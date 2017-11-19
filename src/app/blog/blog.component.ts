@@ -17,7 +17,7 @@ import { BlogService } from './blog.service';
 export class BlogComponent implements OnInit {
   myForm: FormGroup;
   service: IBlogService;
-  message: string;
+  messages: Array<Blog>;
 
   constructor(fb: FormBuilder, private http: Http, service: BlogService) {
     this.service = service;
@@ -28,8 +28,9 @@ export class BlogComponent implements OnInit {
 
   ngOnInit() {
     this.service.getData().subscribe(
-      (results: Blog) => {
-        this.message = results.message;
+      (results: Array<Blog>) => {
+        console.log('messages', results);
+        this.messages = results;
       }
     );
   }
@@ -37,7 +38,7 @@ export class BlogComponent implements OnInit {
   onSubmit(value: string): void {
     console.log('you submitted value: ', value);
     this.http.post(
-      'http://localhost:3000/api/blog',
+      'https://rails-playground-api.herokuapp.com/api/blog',
       value)
       .subscribe(() => {
         console.log('posting...');

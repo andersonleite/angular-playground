@@ -4,22 +4,24 @@ import { Observable } from 'rxjs/Observable';
 import { Http, Response } from '@angular/http';
 import { IBlogService } from './blog.interface';
 
-export const API_URL = 'https://localhost:3000/api/blog';
+export const API_URL = 'https://rails-playground-api.herokuapp.com/api/blog';
 
 @Injectable()
 export class BlogService implements IBlogService {
 
+   messages: Array<Blog>;
+
   constructor(@Inject(API_URL) private apiUrl: string, private http: Http) {
+    this.messages = new Array();
   }
 
-  getData(): Observable<Blog> {
+  getData(): Observable<Array<Blog>> {
     return this.http.get(this.apiUrl)
       .map((response: Response) => {
-        console.log(response.json())
-        return new Blog({
-          message: <any> response.json().message,
-        });
+        this.messages = response.json();
+        return this.messages;
       });
+
   }
 
 }

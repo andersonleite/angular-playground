@@ -14,4 +14,10 @@
 
     <button type="submit" class="ui button">Submit</button>
   </form>
+  <hr>
+
+  <div *ngFor="let m of messages">
+    <div>{{m.message}}</div>
+  </div>
+
 </div>
