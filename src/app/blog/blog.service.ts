@@ -3,8 +3,10 @@ import { Blog } from './blog.model';
 import { Observable } from 'rxjs/Observable';
 import { Http, Response } from '@angular/http';
 import { IBlogService } from './blog.interface';
+import { environment } from '../../environments/environment';
 
-export const API_URL = 'https://rails-playground-api.herokuapp.com/api/blog';
+const endpoint = '/api/blog';
+export const API_URL = environment.apiUrl + endpoint;
 
 @Injectable()
 export class BlogService implements IBlogService {

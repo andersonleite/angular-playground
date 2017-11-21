@@ -8,6 +8,11 @@ import { Blog } from './blog.model';
 import { IBlogService } from './blog.interface';
 
 import { BlogService } from './blog.service';
+import { environment } from '../../environments/environment';
+
+const endpoint = '/api/blog';
+export const API_URL = environment.apiUrl + endpoint;
+
 
 @Component({
   selector: 'app-blog',
@@ -38,7 +43,7 @@ export class BlogComponent implements OnInit {
   onSubmit(value: string): void {
     console.log('you submitted value: ', value);
     this.http.post(
-      'https://rails-playground-api.herokuapp.com/api/blog',
+      API_URL,
       value)
       .subscribe(() => {
         console.log('posting...');
