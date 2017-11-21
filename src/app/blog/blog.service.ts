@@ -9,7 +9,7 @@ export const API_URL = 'https://rails-playground-api.herokuapp.com/api/blog';
 @Injectable()
 export class BlogService implements IBlogService {
 
-   messages: Array<Blog>;
+  messages: Array<Blog>;
 
   constructor(@Inject(API_URL) private apiUrl: string, private http: Http) {
     this.messages = new Array();
