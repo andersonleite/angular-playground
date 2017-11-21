@@ -19,8 +19,8 @@ export class HeaderService implements IHeaderService {
       .map((response: Response) => {
         return new Header({
           title: <any> response.json().title,
-        })
-      })
+        });
+      });
   }
 
 }
