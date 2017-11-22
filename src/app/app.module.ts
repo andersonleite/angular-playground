@@ -50,10 +50,13 @@ import { routes } from './app.routing';
 import { BlogComponent } from './blog/blog.component';
 import { BlogService } from './blog/blog.service';
 import { blogInjectables } from './blog/blog.injectables';
+import { BlankCmp, RootCmp } from './music/test/test.module';
 
 @NgModule({
   declarations: [
     CounterComponent,
+    BlankCmp,
+    RootCmp,
     AppComponent,
     BlogComponent,
     HeaderComponent,
