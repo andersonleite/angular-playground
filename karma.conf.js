@@ -2,14 +2,6 @@
 // https://karma-runner.github.io/0.13/config/configuration-file.html
 
 module.exports = function (config) {
-  if (process.env.TRAVIS) {
-    configuration.browsers = ['Chrome_travis_ci'];
-  }
-  customLaunchers: {
-    Chrome_travis_ci: {
-      base: 'Chrome'
-    }
-  }
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular/cli'],
