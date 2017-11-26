@@ -52,6 +52,13 @@ import { BlogService } from './blog/blog.service';
 import { blogInjectables } from './blog/blog.injectables';
 import { BlankCmp, RootCmp } from './music/test/test.module';
 
+import { MaterializeModule } from 'angular2-materialize';
+import { Angular2TokenService } from 'angular2-token';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { AuthDialogComponent } from './auth-dialog/auth-dialog.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
+
 @NgModule({
   declarations: [
     CounterComponent,
@@ -78,7 +85,11 @@ import { BlankCmp, RootCmp } from './music/test/test.module';
     ChatThreadComponent,
     ChatMessageComponent,
     ChatThreadsComponent,
-    ChatWindowComponent
+    ChatWindowComponent,
+    ToolbarComponent,
+    AuthDialogComponent,
+    LoginFormComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +100,8 @@ import { BlankCmp, RootCmp } from './music/test/test.module';
     FormsModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterializeModule
   ],
   providers: [
     appStoreProviders,
@@ -105,7 +117,8 @@ import { BlankCmp, RootCmp } from './music/test/test.module';
     {provide: APP_BASE_HREF, useValue: '/'},
     AUTH_PROVIDERS,
     LoggedInGuard,
-    MessagesService, ThreadsService, UsersService
+    MessagesService, ThreadsService, UsersService,
+    Angular2TokenService
   ],
   bootstrap: [AppComponent]
 })
