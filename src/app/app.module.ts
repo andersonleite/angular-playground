@@ -60,6 +60,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { AuthService } from './services/auth.service';
 import { ProfileComponent } from './profile/profile.component';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -122,7 +123,8 @@ import { ProfileComponent } from './profile/profile.component';
     LoggedInGuard,
     MessagesService, ThreadsService, UsersService,
     Angular2TokenService,
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

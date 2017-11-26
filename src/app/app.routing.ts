@@ -12,6 +12,7 @@ import { YouTubeSearchComponent } from './search/youtube-search.component';
 import { Routes } from '@angular/router';
 import { BlogComponent } from './blog/blog.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   {path: 'home', redirectTo: '/', pathMatch: 'full'},
@@ -35,6 +36,7 @@ export const routes: Routes = [
   },
   {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
   }
 ];
