@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { YouTubeSearchComponent } from './search/youtube-search.component';
 import { Routes } from '@angular/router';
 import { BlogComponent } from './blog/blog.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export const routes: Routes = [
   {path: 'home', redirectTo: '/', pathMatch: 'full'},
@@ -32,4 +33,8 @@ export const routes: Routes = [
     component: ProtectedComponent,
     canActivate: [ LoggedInGuard ]
   },
+  {
+    path: 'profile',
+    component: ProfileComponent
+  }
 ];
