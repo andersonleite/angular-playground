@@ -47,11 +47,11 @@ export class AuthDialogComponent implements OnInit {
   }
 
   isLoginMode() {
-    return this.authMode === 'login';
+    return this.authMode == 'login';
   }
 
   isRegisterMode() {
-    return this.authMode === 'register';
+    return this.authMode == 'register'
   }
 
 

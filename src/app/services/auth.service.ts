@@ -29,7 +29,7 @@ export class AuthService {
     return this.authService.registerAccount(signUpData).map(
       res => {
         this.userSignedIn$.next(true);
-        return res
+        return res;
       }
     );
   }
@@ -39,7 +39,7 @@ export class AuthService {
     return this.authService.signIn(signInData).map(
       res => {
         this.userSignedIn$.next(true);
-        return res
+        return res;
       }
     );
 

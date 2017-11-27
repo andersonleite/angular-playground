@@ -25,7 +25,7 @@ export class LoginFormComponent implements OnInit {
 
     this.authService.logInUser(this.signInUser).subscribe(
       res => {
-        if (res.status == 200) {
+        if (res.status === 200) {
           this.onFormResult.emit({signedIn: true, res});
         }
       },
