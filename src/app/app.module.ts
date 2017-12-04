@@ -61,6 +61,7 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { AuthService } from './services/auth.service';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './guards/auth.guard';
+import { ZoneComponent } from './zone/zone.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { AuthGuard } from './guards/auth.guard';
     AuthDialogComponent,
     LoginFormComponent,
     RegisterFormComponent,
-    ProfileComponent
+    ProfileComponent,
+    ZoneComponent
   ],
   imports: [
     BrowserModule,

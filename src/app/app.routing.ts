@@ -13,6 +13,7 @@ import { Routes } from '@angular/router';
 import { BlogComponent } from './blog/blog.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './guards/auth.guard';
+import { ZoneComponent } from './zone/zone.component';
 
 export const routes: Routes = [
   {path: 'home', redirectTo: '/', pathMatch: 'full'},
@@ -26,6 +27,7 @@ export const routes: Routes = [
   {path: 'search', component: SearchComponent},
   {path: 'artists/:id', component: ArtistComponent},
   {path: 'tracks/:id', component: TrackComponent},
+  {path: 'zone', component: ZoneComponent},
   {path: 'albums/:id', component: AlbumComponent},
   // authentication demo
   { path: 'login', component: LoginComponent },
