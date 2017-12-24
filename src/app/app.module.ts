@@ -62,6 +62,7 @@ import { AuthService } from './services/auth.service';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ZoneComponent } from './zone/zone.component';
+import { PreloaderComponent } from './preloader/preloader.component';
 
 @NgModule({
   declarations: [
@@ -95,7 +96,8 @@ import { ZoneComponent } from './zone/zone.component';
     LoginFormComponent,
     RegisterFormComponent,
     ProfileComponent,
-    ZoneComponent
+    ZoneComponent,
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,

@@ -14,9 +14,11 @@ import { BlogComponent } from './blog/blog.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ZoneComponent } from './zone/zone.component';
+import { PreloaderComponent } from './preloader/preloader.component';
 
 export const routes: Routes = [
   {path: 'home', redirectTo: '/', pathMatch: 'full'},
+  {path: 'preloader', component: PreloaderComponent},
   {path: 'youtube', component: YouTubeSearchComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'about', component: AboutComponent},
