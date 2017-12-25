@@ -1,8 +1,7 @@
-<app-toolbar></app-toolbar>
-<app-header></app-header>
+<div class="container">
+  <app-header></app-header>
 
-<div class="page-header">
-  <div class="container">
+  <div class="page-header">
     <div class="navLinks">
       <a [routerLink]="['/preloader']">Preloader</a>
       <a [routerLink]="['/youtube']">Youtube</a>
@@ -16,11 +15,13 @@
       <a [routerLink]="['/protected']">Protected</a>
     </div>
   </div>
+
+  <div id="content">
+      <router-outlet></router-outlet>
+  </div>
+
+  <br><br><app-toolbar></app-toolbar>
+
 </div>
 
-<div id="content">
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</div>
 

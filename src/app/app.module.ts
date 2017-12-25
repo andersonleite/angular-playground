@@ -63,6 +63,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ZoneComponent } from './zone/zone.component';
 import { PreloaderComponent } from './preloader/preloader.component';
+import { TypetextComponent } from './typetext/typetext.component';
 
 @NgModule({
   declarations: [
@@ -97,7 +98,8 @@ import { PreloaderComponent } from './preloader/preloader.component';
     RegisterFormComponent,
     ProfileComponent,
     ZoneComponent,
-    PreloaderComponent
+    PreloaderComponent,
+    TypetextComponent
   ],
   imports: [
     BrowserModule,
