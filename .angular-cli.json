@@ -21,7 +21,9 @@
       "styles": [
         "styles.scss",
         "../node_modules/font-awesome/css/font-awesome.css",
-        "assets/css/animate.css"
+        "assets/css/animate.css",
+        "assets/css/grid.css",
+        "assets/css/grid-custom.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",

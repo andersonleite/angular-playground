@@ -1,26 +1,294 @@
 <div class="container">
   <app-header></app-header>
 
-  <div class="page-header">
-    <div class="navLinks">
-      <a [routerLink]="['/preloader']">Preloader</a>
-      <a [routerLink]="['/youtube']">Youtube</a>
-      <a [routerLink]="['/contact']">Animation</a>
-      <a [routerLink]="['/search']">Spotify</a>
-      <a [routerLink]="['/about/9']">Chat</a>
-      <a [routerLink]="['/counter']">Redux</a>
-      <a [routerLink]="['/blog']">Blog</a>
-      <a [routerLink]="['/zone']">Zone</a>
-      <a [routerLink]="['/login']">Login</a>
-      <a [routerLink]="['/protected']">Protected</a>
+  <div class="row">
+    <div class="twelve columns portfolio-item-class portfolio-item-class-1" style="margin-bottom: 60px;">
+      <div class="portfolio-filter-wrapper">
+        <div class="clear"></div>
+      </div>
+      <div class="portfolio-item-holder row isotope" style="position: relative; overflow: hidden; height: 1280px;">
+        <div class="four columns portfolio-item mb20 isotope-item"
+             style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
+          <div class="portfolio-item-inner">
+            <div class="portfolio-media-wrapper gdl-image">
+              <a class="hover-wrapper" [routerLink]="['/preloader']" data-rel="fancybox" data-fancybox-group="gal0"
+                 title="Magna Cursus Bibendum">
+                <span class="portfolio-thumbnail-image-hover" style="display: none;"></span>
+                <span class="portfolio-thumbnail-gimmick-top" style="display: none;"></span>
+                <span class="portfolio-thumbnail-gimmick-bottom" style="display: none;"></span>
+                <span class="hover-zoom hover-icon" style="display: none;"></span>
+              </a>
+              <img src="assets/images/items/preloader.jpg" alt="" data-scroll="534" style="opacity: 1;">
+              <div class="gdl-thumbnail-gimmick"></div>
+            </div>
+            <div class="portfolio-context">
+              <h2 class="portfolio-title"><a [routerLink]="['/preloader']">Animation Preloader</a></h2>
+              <div class="portfolio-tag"><a href="http://demo.goodlayers.com/ideo/portfolio-tag/design/" rel="tag">angular</a>,
+                <a href="http://demo.goodlayers.com/ideo/portfolio-tag/minimalist/" rel="tag">css</a></div>
+              <div class="portfolio-excerpt">Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat
+                porttitor ligula, eget lacinia odio sem nec elit. Sed
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+
+        <div class="four columns portfolio-item mb20 isotope-item"
+             style="position: absolute; left: 0px; top: 0px; transform: translate3d(320px, 0px, 0px);">
+          <div class="portfolio-item-inner">
+            <div class="portfolio-context"><h2 class="portfolio-title"><a
+              [routerLink]="['/zone']">Using Angular and Zone.js</a></h2>
+              <div class="portfolio-tag">
+                <a href="http://demo.goodlayers.com/ideo/portfolio-tag/studio/" rel="tag">angular</a>, <a
+                  href="http://demo.goodlayers.com/ideo/portfolio-tag/website/" rel="tag">zone.js</a></div>
+              <div class="portfolio-excerpt">Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat
+                porttitor ligula, eget lacinia odio sem nec elit. Sed
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="four columns portfolio-item mb20 isotope-item"
+             style="position: absolute; left: 0px; top: 0px; transform: translate3d(640px, 0px, 0px);">
+          <div class="portfolio-item-inner">
+            <div class="portfolio-media-wrapper gdl-image"><a class="hover-wrapper"
+                                                              [routerLink]="['/youtube']"
+                                                              data-rel="fancybox" data-fancybox-type="iframe"
+                                                              title="Ligula Bibendum Elit"><span
+              class="portfolio-thumbnail-image-hover" style="display: none;"></span><span
+              class="portfolio-thumbnail-gimmick-top" style="display: none;"></span><span
+              class="portfolio-thumbnail-gimmick-bottom" style="display: none;"></span><span
+              class="hover-video hover-icon" style="display: none;"></span></a><img
+              src="assets/images/items/youtube.jpg"
+              alt="" data-scroll="534" style="opacity: 1;">
+              <div class="gdl-thumbnail-gimmick"></div>
+            </div>
+            <div class="portfolio-context"><h2 class="portfolio-title"><a
+              [routerLink]="['/youtube']">Youtube Search</a></h2>
+              <div class="portfolio-tag">
+                <a href="http://demo.goodlayers.com/ideo/portfolio-tag/clean/" rel="tag">angular</a>,
+                <a href="http://demo.goodlayers.com/ideo/portfolio-tag/clean/" rel="tag">http</a>,
+                <a href="http://demo.goodlayers.com/ideo/portfolio-tag/minimalist/" rel="tag">youtube API</a></div>
+              <div class="portfolio-excerpt">Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat
+                porttitor ligula, eget lacinia odio sem nec elit. Sed
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="four columns portfolio-item mb20 isotope-item"
+             style="position: absolute; left: 0px; top: 0px; transform: translate3d(320px, 167px, 0px);">
+          <div class="portfolio-item-inner">
+            <div class="portfolio-media-wrapper gdl-image"><a class="hover-wrapper"
+                                                              [routerLink]="['/contact']"
+                                                              title="Fringilla Egestas Vulputate"><span
+              class="portfolio-thumbnail-image-hover" style="display: none;"></span><span
+              class="portfolio-thumbnail-gimmick-top" style="display: none;"></span><span
+              class="portfolio-thumbnail-gimmick-bottom" style="display: none;"></span><span
+              class="hover-link hover-icon" style="display: none;"></span></a><img
+              src="assets/images/items/animations.jpg"
+              alt="" data-scroll="888.484375" style="opacity: 1;">
+              <div class="gdl-thumbnail-gimmick"></div>
+            </div>
+            <div class="portfolio-context"><h2 class="portfolio-title"><a
+              [routerLink]="['/contact']">Angular Animations</a></h2>
+              <div class="portfolio-tag"><a href="http://demo.goodlayers.com/ideo/portfolio-tag/clean/"
+                                            rel="tag">angular</a>, <a
+                href="http://demo.goodlayers.com/ideo/portfolio-tag/website/" rel="tag">animations</a></div>
+              <div class="portfolio-excerpt">Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat
+                porttitor ligula, eget lacinia odio sem nec elit. Sed
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="four columns portfolio-item mb20 isotope-item"
+             style="position: absolute;left: 0px;top: 0px;transform: translate3d(640px, 354px, 0px);">
+          <div class="portfolio-item-inner">
+            <div class="portfolio-media-wrapper gdl-image"><a class="hover-wrapper"
+                                                              [routerLink]="['/blog']"
+                                                              title="Inceptos Dolor Nibh"><span
+              class="portfolio-thumbnail-image-hover" style="display: none;"></span><span
+              class="portfolio-thumbnail-gimmick-top" style="display: none;"></span><span
+              class="portfolio-thumbnail-gimmick-bottom" style="display: none;"></span><span
+              class="hover-link hover-icon" style="display: none;"></span></a><img
+              src="assets/images/items/blog.jpg"
+              alt="" data-scroll="888.484375" style="opacity: 1;">
+              <div class="gdl-thumbnail-gimmick"></div>
+            </div>
+            <div class="portfolio-context"><h2 class="portfolio-title"><a
+              [routerLink]="['/blog']">Rails and Angular Blog integration</a></h2>
+              <div class="portfolio-tag"><a href="http://demo.goodlayers.com/ideo/portfolio-tag/clean/"
+                                            rel="tag">angular</a>, <a
+                href="http://demo.goodlayers.com/ideo/portfolio-tag/website/" rel="tag">rails</a></div>
+              <div class="portfolio-excerpt">Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat
+                porttitor ligula, eget lacinia odio sem nec elit. Sed
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="four columns portfolio-item mb20 isotope-item"
+             style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 391px, 0px);">
+          <div class="portfolio-item-inner">
+            <div class="portfolio-media-wrapper gdl-image"><a class="hover-wrapper"
+                                                              [routerLink]="['/search']"
+                                                              data-rel="fancybox" data-fancybox-group="gal0"
+                                                              title="Amet Sollicitudin"><span
+              class="portfolio-thumbnail-image-hover" style="display: none;"></span><span
+              class="portfolio-thumbnail-gimmick-top" style="display: none;"></span><span
+              class="portfolio-thumbnail-gimmick-bottom" style="display: none;"></span><span
+              class="hover-zoom hover-icon" style="display: none;"></span></a><img
+              src="assets/images/items/spotify.jpg" alt=""
+              data-scroll="1385.453125" style="opacity: 1;">
+              <div class="gdl-thumbnail-gimmick"></div>
+            </div>
+            <div class="portfolio-context"><h2 class="portfolio-title"><a
+              [routerLink]="['/search']">Spotify API</a></h2>
+              <div class="portfolio-tag"><a href="http://demo.goodlayers.com/ideo/portfolio-tag/clean/"
+                                            rel="tag">angular</a>,
+                <a href="http://demo.goodlayers.com/ideo/portfolio-tag/clean/"
+                   rel="tag">auth</a>,                <a
+                href="http://demo.goodlayers.com/ideo/portfolio-tag/website/" rel="tag">http</a></div>
+              <div class="portfolio-excerpt">Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat
+                porttitor ligula, eget lacinia odio sem nec elit. Sed
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="four columns portfolio-item mb20 isotope-item"
+             style="position: absolute; left: 0px; top: 0px; transform: translate3d(320px, 521px, 0px);">
+          <div class="portfolio-item-inner">
+            <div class="portfolio-media-wrapper gdl-image"><a class="hover-wrapper"
+                                                              [routerLink]="['/about/9']"
+                                                              data-rel="fancybox" data-fancybox-group="gal0"
+                                                              title="Justo Pharetra Mattis"><span
+              class="portfolio-thumbnail-image-hover"></span><span class="portfolio-thumbnail-gimmick-top"></span><span
+              class="portfolio-thumbnail-gimmick-bottom"></span><span class="hover-zoom hover-icon"></span></a><img
+              src="assets/images/items/chat.jpg" alt=""
+              data-scroll="1385.453125" style="opacity: 1;">
+              <div class="gdl-thumbnail-gimmick"></div>
+            </div>
+            <div class="portfolio-context"><h2 class="portfolio-title"><a
+              [routerLink]="['/about/9']">Chat with RxJS Observables</a></h2>
+              <div class="portfolio-tag"><a href="http://demo.goodlayers.com/ideo/portfolio-tag/brading/" rel="tag">RxJS</a>,
+                <a href="http://demo.goodlayers.com/ideo/portfolio-tag/identity/" rel="tag">angular</a>, <a
+                  href="http://demo.goodlayers.com/ideo/portfolio-tag/logo/" rel="tag">Typescript</a></div>
+              <div class="portfolio-excerpt">Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat
+                porttitor ligula, eget lacinia odio sem nec elit. Sed
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="four columns portfolio-item mb20 isotope-item"
+             style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 759px, 0px);">
+          <div class="portfolio-item-inner">
+            <div class="portfolio-media-wrapper gdl-image"><a class="hover-wrapper"
+                                                              [routerLink]="['/counter']"
+                                                              title="Nibh Mattis Fermentum"><span
+              class="portfolio-thumbnail-image-hover"></span><span class="portfolio-thumbnail-gimmick-top"></span><span
+              class="portfolio-thumbnail-gimmick-bottom"></span><span class="hover-link hover-icon"></span></a><img
+              src="assets/images/items/redux.jpg" alt=""
+              style="opacity: 1;" data-scroll="1385.453125">
+              <div class="gdl-thumbnail-gimmick"></div>
+            </div>
+            <div class="portfolio-context"><h2 class="portfolio-title"><a
+              [routerLink]="['/counter']">Using a Redux store</a></h2>
+              <div class="portfolio-tag"><a href="http://demo.goodlayers.com/ideo/portfolio-tag/data/"
+                                            rel="tag">angular</a>, <a
+                href="http://demo.goodlayers.com/ideo/portfolio-tag/website/" rel="tag">redux</a></div>
+              <div class="portfolio-excerpt">Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat
+                porttitor ligula, eget lacinia odio sem nec elit. Sed
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="four columns portfolio-item mb20 isotope-item"
+             style="position: absolute; left: 0px; top: 0px; transform: translate3d(640px, 851px, 0px);">
+          <div class="portfolio-item-inner">
+            <div class="portfolio-media-wrapper gdl-image"><a class="hover-wrapper" [routerLink]="['/protected']"
+                                                              data-rel="fancybox" data-fancybox-type="iframe"
+                                                              title="Nibh Ullamcorper Quam"><span
+              class="portfolio-thumbnail-image-hover"></span><span class="portfolio-thumbnail-gimmick-top"></span><span
+              class="portfolio-thumbnail-gimmick-bottom"></span><span class="hover-video hover-icon"></span></a><img
+              src="assets/images/items/guard.jpg" alt=""
+              style="opacity: 1;" data-scroll="1777.4375">
+              <div class="gdl-thumbnail-gimmick"></div>
+            </div>
+            <div class="portfolio-context"><h2 class="portfolio-title"><a
+              [routerLink]="['/protected']">Angular Auth Guards</a></h2>
+              <div class="portfolio-tag"><a href="http://demo.goodlayers.com/ideo/portfolio-tag/graph/"
+                                            rel="tag">Graph</a>, <a
+                href="http://demo.goodlayers.com/ideo/portfolio-tag/logo/" rel="tag">Logo</a></div>
+              <div class="portfolio-excerpt">Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat
+                porttitor ligula, eget lacinia odio sem nec elit. Sed
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="four columns portfolio-item mb20 isotope-item"
+             style="position: absolute; left: 0px; top: 0px; transform: translate3d(320px, 914px, 0px);">
+          <div class="portfolio-item-inner">
+            <div class="portfolio-media-wrapper gdl-image"><a class="hover-wrapper"
+                                                              [routerLink]="['/login']"
+                                                              data-rel="fancybox" data-fancybox-group="gal0"
+                                                              title="Ligula Sem Mattis"><span
+              class="portfolio-thumbnail-image-hover"></span><span class="portfolio-thumbnail-gimmick-top"></span><span
+              class="portfolio-thumbnail-gimmick-bottom"></span><span class="hover-zoom hover-icon"></span></a><img
+              src="assets/images/items/login.jpg"
+              alt="" data-scroll="2170.828125" style="opacity: 1;">
+              <div class="gdl-thumbnail-gimmick"></div>
+            </div>
+            <div class="portfolio-context"><h2 class="portfolio-title"><a
+              [routerLink]="['/login']">Implementing a login screen</a></h2>
+              <div class="portfolio-tag"><a href="http://demo.goodlayers.com/ideo/portfolio-tag/photographic/"
+                                            rel="tag">auth</a>, <a
+                href="http://demo.goodlayers.com/ideo/portfolio-tag/studio/" rel="tag">angular</a></div>
+              <div class="portfolio-excerpt">Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat
+                porttitor ligula, eget lacinia odio sem nec elit. Sed
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+
+
+        <div class="clear isotope-item isotope-hidden"
+             style="position: absolute; left: 0px; top: 0px; opacity: 0; transform: scale3d(0.001, 0.001, 1);"></div>
+      </div>
+
     </div>
+    <div class="clear"></div>
   </div>
+
+
+  <!--<div class="page-header">-->
+    <!--<div class="navLinks">-->
+      <!--<div class="portifolio-item-inner">-->
+        <!--<a [routerLink]="['/preloader']">Preloader</a>-->
+      <!--</div>-->
+      <!--<a [routerLink]="['/youtube']">Youtube</a>-->
+      <!--<a [routerLink]="['/contact']">Animation</a>-->
+      <!--<a [routerLink]="['/search']">Spotify</a>-->
+      <!--<a [routerLink]="['/about/9']">Chat</a>-->
+      <!--<a [routerLink]="['/counter']">Redux</a>-->
+      <!--<a [routerLink]="['/blog']">Blog</a>-->
+      <!--<a [routerLink]="['/zone']">Zone</a>-->
+      <!--<a [routerLink]="['/login']">Login</a>-->
+      <!--<a [routerLink]="['/protected']">Protected</a>-->
+    <!--</div>-->
+  <!--</div>-->
 
   <div id="content">
-      <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
   </div>
 
-  <br><br><app-toolbar></app-toolbar>
+  <!--<br><br>-->
+  <!--<app-toolbar></app-toolbar>-->
 
 </div>
 

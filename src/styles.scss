@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  background: #f3f3f3 url(http://demo.goodlayers.com/ideo/wp-content/themes/ideo/images/pattern/pattern-1.png);
+}
+
 body {
-  /*background-color: #be3129;*/
-  //text-align: center;
-  /*color: white;*/
   font-family: 'Open Sans', sans-serif;
-  cursor: pointer;
   font-size:11px;
+  color: #707070;
 }
