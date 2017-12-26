@@ -1,0 +1,159 @@
+/* #Foundation Style
+================================================== */
+.row .column, .row .columns{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.container{ margin: 0px auto; padding: 0px 20px; max-width: 960px; }
+
+.row { width: 1140px; max-width: 100%; margin: 0 auto; }
+.row .row { width: auto; max-width: none; min-width: 0; margin: 0 -10px; }
+
+.column, .columns { float: left; min-height: 1px; padding: 0 10px; position: relative; }
+.column.wrapper, .columns.wrapper{ padding: 0px; }
+
+.row .one { width: 8.333%; }
+.row .two { width: 16.667%; }
+.row .three { width: 25%; }
+.row .four { width: 33.333%; }
+.row .five { width: 41.667%; }
+.row .six { width: 50%; }
+.row .seven { width: 58.333%; }
+.row .eight { width: 66.667%; }
+.row .nine { width: 75%; }
+.row .ten { width: 83.333%; }
+.row .eleven { width: 91.667%; }
+.row .twelve { width: 100%; }
+
+.row .one-fifth{ width: 20%; }
+.row .one-sixth{ width: 16.667%; }
+
+img{ max-width: 100%; height: auto; }
+img { -ms-interpolation-mode: bicubic; }
+object, embed { max-width: 100%; }
+
+/* #Foundation Mobile Size
+================================================== */
+@media only screen and (max-width: 767px) {
+  body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none;
+    width: 100%; min-width: 0; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }
+
+  .container{ margin: 0px auto; max-width: 420px; }
+
+  .row { width: auto; min-width: 0; margin-left: 0; margin-right: 0; }
+
+  .row .column, .row .columns { width: 100%; float: none; }
+
+  .column:last-child, .columns:last-child { float: none; }
+  [class*="column"] + [class*="column"]:last-child { float: none; }
+
+  .column:before, .columns:before, .column:after, .columns:after { content: ""; display: table; }
+  .column:after, .columns:after { clear: both; }
+}
+
+/* #Custom Style
+================================================== */
+
+/*--- header area ---*/
+div.header-wrapper .responsive-menu-wrapper{ display: none; }
+
+@media only screen and (min-width: 1000px) {
+  div.flex-caption, div.nivo-caption{ left: 50%; margin-left: -470px; max-width: 400px; }
+}
+
+/* #Custom Ipad size
+================================================== */
+@media only screen and (max-width: 959px) {
+
+  .style-2 div.header-right-side2{ float:none; text-align: center; }
+  .style-2 div.header-right-side-content2, div.social-wrapper.style-2{ float: none; display: inline-block; }
+  div.social-wrapper.style-2 { margin-bottom: 20px; }
+  div.header-container.container{ max-width: none; padding: 0px; }
+
+  div.header-left-side{ float: none; }
+  div.logo-wrapper{  float: none; text-align: center; margin: 0px 20px; }
+  div.logo-wrapper{ padding-top: 25px !important; padding-bottom: 10px !important; }
+  div.gdl-navigation-wrapper{ float: none; text-align: center; }
+  div.gdl-navigation-wrapper .navigation-wrapper{ display: inline-block; }
+
+  div.header-right-side{ height: auto !important; padding: 20px !important; float: none;  min-width: 0px; }
+  div.header-right-side-content{ position: static; text-align: center; }
+  div.header-overlay-right{ display: none; }
+
+  div.header-right-outter { display: inline-block; margin-right: 30px; }
+  div.header-right-wrapper{ display: inline-block; margin-bottom: 0px !important; }
+
+  div#gdl-social-icon{ right: 0px !important; }
+}
+
+/* #Custom Mobile size
+================================================== */
+@media only screen and (max-width: 767px) {
+  /*--- header area ---*/
+  div.header-container.container{ max-width: none; padding: 0px; }
+
+  div.header-left-side{ float: none; }
+  div.logo-wrapper{ text-align: center; margin: 0px 20px; }
+
+  div.header-right-side{ height: auto !important; padding: 20px 20px 0 !important; float: none;  min-width: 0px; }
+  div.header-right-side-content{ position: static; text-align: center; }
+  div.header-overlay-right{ display: none; }
+
+  div.header-right-outter { display: block; margin-right: 0px; }
+  div.header-right-wrapper{ display: inline-block; margin-bottom: 20px !important; }
+
+  div.social-wrapper{ position: static !important; text-align: center;
+    float: none; margin: 0px; line-height: 0; padding-bottom: 15px; }
+  div.social-icon-wrapper{ display: inline-block; }
+
+  div.top-search-wrapper{ float: none; margin-left: 0px; display: none; }
+  div.top-navigation-left{ float: none; padding: 10px 0px 5px; }
+  div.top-navigation-right{ float: none; padding: 5px 0px 10px; }
+
+  div.header-wrapper .logo-wrapper{ float: none; padding: 40px 0px 30px; }
+  div.header-wrapper .gdl-navigation-wrapper{ float: none; padding-bottom: 20px; }
+  div.header-wrapper .responsive-menu-wrapper{ display: block; }
+  div.header-wrapper .navigation-wrapper{ display: none; }
+
+  div.gdl-title-image-inner-wrapper { padding: 20px 10px 10px; }
+
+  /*--- sidebar ---*/
+  div.gdl-left-sidebar .sidebar-wrapper,
+  div.gdl-right-sidebar .sidebar-wrapper { padding-left: 0px; padding-right: 0px; }
+  div.gdl-sidebar-wrapper.gdl-border-y{ background: none; }
+
+  /*--- single page ---*/
+  div.single-portfolio .port-media-wrapper { max-width: 100%; width: 100%; float: none; margin-bottom: 20px; }
+  div.single-portfolio .port-content-wrapper { overflow: visible; }
+  div.single-portfolio .port-nav .port-prev-nav, div.single-portfolio .port-nav .port-next-nav { margin-bottom: 15px; }
+
+  div.portfolio-media-wrapper.empty-container{ display: none; }
+
+  /*--- page item ---*/
+  div.port-nav-wrapper { margin-bottom: 20px; display: inline-block; }
+  div.price-item{ margin-bottom: 20px; }
+
+  /*--- shortcode ---*/
+  .shortcode1-4, .shortcode1-4.last,
+  .shortcode1-3, .shortcode1-3.last,
+  .shortcode1-2, .shortcode1-2.last,
+  .shortcode2-3, .shortcode2-3.last,
+  .shortcode3-4, .shortcode3-4.last,
+  .shortcode1-5, .shortcode1-5.last,
+  .shortcode2-5, .shortcode2-5.last,
+  .shortcode3-5, .shortcode3-5.last,
+  .shortcode4-5, .shortcode4-5.last{ width: 100%; }
+
+  /*--- stunning-text ---*/
+  div.stunning-text-wrapper { text-align: center; }
+  div.stunning-text-wrapper .stunning-text-title { font-size: 40px; }
+
+
+  /*--- slider ---*/
+  div.nivo-caption, div.flex-caption{ left: 0px; bottom: 0px; right: 0px; padding: 0px; max-width: none !important; }
+  h2.gdl-slider-title span{ padding: 5px 12px; margin-bottom: 0px !important; font-size: 20px; display: block; }
+  div.gdl-slider-caption{ display: none !important; }
+
+  /*--- footer ---*/
+  div.copyright-left{ float: none; text-align: center; padding-bottom: 8px; }
+  div.copyright-right{ float: none; text-align: center; padding-top: 0px; }
+
+}
