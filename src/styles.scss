@@ -11,7 +11,7 @@ body {
 }
 
 .outer-container {
-  display: none;
+  //display: none;
 }
 
 .pusher {
@@ -63,9 +63,14 @@ body {
   font-size: .8125em;
   line-height: 1.3846153846em;
   transition: all .25s ease;
+
+  &:hover{
+    background-color: #363636;
+    border-color: #363636;
+  }
 }
 
-pusher ul {
+.pusher ul {
   list-style: none;
   list-style-image: none;
 
