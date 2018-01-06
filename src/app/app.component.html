@@ -284,25 +284,12 @@
   <!--</div>-->
 
   <div class="outer-container">
-
-    <a href="#" class="menu-trigger">
-      <span class="hamburguer"></span>
-    </a>
-
-    <div class="pusher">
-      <div class="mp-level">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li class="expanded"><a href="#">Angular</a></li>
-          <li class="expanded"><a href="#">Rails</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </div>
-    </div>
+    <app-menu></app-menu>
+    <router-outlet></router-outlet>
   </div>
 
   <div id="content">
-    <router-outlet></router-outlet>
+
   </div>
 
   <!--<br><br>-->

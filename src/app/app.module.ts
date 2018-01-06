@@ -64,6 +64,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { ZoneComponent } from './zone/zone.component';
 import { PreloaderComponent } from './preloader/preloader.component';
 import { TypetextComponent } from './typetext/typetext.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -99,7 +100,8 @@ import { TypetextComponent } from './typetext/typetext.component';
     ProfileComponent,
     ZoneComponent,
     PreloaderComponent,
-    TypetextComponent
+    TypetextComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
