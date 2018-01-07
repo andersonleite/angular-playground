@@ -77,6 +77,13 @@
     margin: 0;
     padding: 0;
 
+    a {
+      &.active {
+        border-left-color: red;
+        background-color: #222;
+      }
+    }
+
     &.expanded {
       list-style-image: none;
 
@@ -96,6 +103,8 @@
           top: 50%;
           width: 7px;
         }
+
+
       }
     }
 
